@@ -8,7 +8,7 @@ import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import User from './components/User/User.jsx'
-import Github from './components/Github/Github.jsx'
+import Github, {githubInfoLoader} from './components/Github/Github.jsx'
 // const router = createBrowserRouter([
 //   { path: '/',
 //     element: <Layout/>,
@@ -38,7 +38,12 @@ const router= createBrowserRouter(
     <Route path='about' element={<About />} />
     <Route path='contact' element={<Contact />} />
     <Route path='User/:Userid' element={<User />} />
-    <Route path='Github' element={<Github />} />
+    <Route 
+    // loaders are used for the better optimization purpose and use to fetch api's faster
+
+    loader={githubInfoLoader}
+    path='Github'
+     element={<Github />} />
   </Route>
   )
 )
