@@ -13,6 +13,7 @@ export const ThemeContext = createContext({
 //  so  below line is basically a provider of above function
 //  so themeprovider is the provider of themecontext
 //  we will use it for wrapping the elements 
+
 export const ThemeProvider = ThemeContext.Provider
 // usually everyone make their custom hooks here and we can also export that 
 export default function useTheme(){
